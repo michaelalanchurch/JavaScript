@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Annoy Prompt</title>
+</head>
+<body>
+	<h1>Annoying Script</h1>
+	<h3>Are we there yet?</h3>
+	<script type="text/javascript" src="annoyScript.js"></script>
+</body>
+</html>
+***************************************************
+var answer = prompt("Are we there yet?");
+
+while(answer.indexOf("yes") === -1) {
+	var answer = prompt("Are we there yet?");
+}
+
+alert("We're here!");
