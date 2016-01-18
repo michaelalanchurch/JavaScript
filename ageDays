@@ -1,0 +1,14 @@
+<!DOCTYPE html>	
+<html>
+<head>
+	<title>Age Calulator</title>
+</head>
+<body>
+<h1>Age Calculator</h1>
+<script type="text/javascript" src="age.js"></script>
+</body>
+</html>
+********************************************************
+var age = prompt("What is your age in years?");
+var days = age * 365.25;
+alert(age + " is around " + days + " days old!");
