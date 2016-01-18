@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1st .js file</title>
+	<script type="text/javascript" src="first.js"></script>
+</head>
+<body>
+<h1>JS Exercise</h1>
+</body>
+</html>
+*************************************************************************
+var firstName = prompt("What is your name?");
+var lastName = prompt("What is your last name, " + firstName + "?");
+var age = prompt("What is your age?");
+// var fullName = firstName + " " + lastName;
+// console.log("Your full name is " + fullName);
+console.log("Your full name is " + firstName + " " + lastName);
+console.log("You are " + age + " years old");
