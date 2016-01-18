@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your age</title>
+
+</head>
+<body>
+<h1>Weird Ages</h1>
+	<script type="text/javascript" src="weirdAges.js"></script>
+</body>
+</html>
+*************************************************************
+var age = prompt("What is your age?");
+
+if(age < 0) {
+	alert("Good luck on your upcoming birth.");
+}
+
+else if(age == 21) {
+	alert("Happy 21st birthday!");
+}
+
+else if((age % 2) > 0 && (Math.sqrt(age)%1 == 0)) {
+	alert("You're a perfectly odd square!");
+}
+
+else if(Math.sqrt(age)%1 == 0) {
+	alert("Your age is a perfect square!");
+}
+
+else if((age % 2) > 0) {
+	alert("Your age is odd.");
+}
+
+else {
+	alert("Your age is even, but not a square.");
+}
