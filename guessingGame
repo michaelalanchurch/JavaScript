@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guessing Game</title>
+</head>
+<body>
+<h1>Pick a number between 1 and 10...</h1>
+<script type="text/javascript" src="guessingGame.js"></script>
+</body>
+</html>
+*************************************************************
+var number = prompt("Pick a number between 1 and 10...");
+
+if(number == 7) {
+	alert("You got it!");
+}
+
+else if(number > 0 && number < 7) {
+	alert("Too low.");
+}
+
+else if(number > 7 && number < 11) {
+	alert("Too high.");
+}
+
+else {
+	alert("Read the directions, smart guy.")
+}
