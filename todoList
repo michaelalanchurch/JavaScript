@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- <html>
+<head>
+	<title>Todo List</title>
+</head>
+<body>
+	<h1>Todo List</h1>
+	<ol>
+		<li>"new" - Add A Todo</li>
+		<li>"list" - View All Todos</li>
+		<li>"quit" - Quit App</li>
+	</ol>
+	<script type="text/javascript" src="todoList.js"></script>
+</body>
+</html>
+ -->
+
+<html>
+<head>
+	<title>Todo List</title>
+</head>
+<body>
+	<h1>Todo List</h1>
+	<ol>
+		<li>"new" - Add A Todo</li>
+		<li>"list" - View All Todos</li>
+		<li>"delete" - Remove A List Item</li>
+		<li>"quit" - Quit App</li>
+	</ol>
+	<script type="text/javascript" src="todoList.js"></script>
+</body>
+</html>
+******************************************************************
+// var todoList = [];
+
+// var input = prompt("Type \"new\" to add a list item.");
+
+// while(input !== "quit") {
+// 	if(input === "list") {
+// 		console.log(todoList);
+// 	}
+// 	else if(input === "new") {
+// 		var newTodo = prompt("Enter new list item.");
+// 		todoList.push(newTodo);
+// 	}
+// 	input = prompt("Type \"new\" to add a list item or \"list\" to recall all tasks.");
+// }
+
+// console.log("Refresh when ready to open app.");
+
+
+var todoList = [];
+
+var input = prompt("Type \"new\" to add a list item.");
+
+while(input !== "quit") {
+	if(input === "list") {
+	 	listItems();
+	}
+	else if(input === "new") {
+		addItem();
+	}
+	else if(input === "delete") {
+		deleteItem();
+	};
+	input = prompt("Type \"new\" to add a list item, \"delete\" to remove an item, \"list\" to recall all tasks, or \"quit\" to exit");
+}
+
+console.log("Refresh when ready to open app.");
+
+function listItems() {		
+		console.log("***");
+		todoList.forEach(function(x, y) {
+		console.log(x + " - at #" + y);
+		});
+		console.log("***");
+}
+
+function addItem() {
+	var newTodo = prompt("Enter new list item.");
+		todoList.push(newTodo);
+		console.log("New item added.");
+}
+
+function deleteItem() {
+	var index = prompt("Enter index number to be removed.");
+		todoList.splice(index, 1);
+		console.log("Item removed.");
+}
