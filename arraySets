@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Sets</title>
+	<script type="text/javascript" src="arraySets.js"></script>
+</head>
+<body>
+	<h1>Array Problem Sets</h1>
+	<p>Open the console!</p>
+
+</body>
+</html>
+****************************************************************
+function printReverse(num) {
+	for (var i = num.length - 1; i >= 0; i--) {
+	 console.log(num[i]);
+	};
+}
+
+printReverse(["bye", "so soon?", "can\'t talk", "howdy"])
+
+
+function isUniform(num) {
+	var first = num[0];
+	for (var i = 1; i < num.length; i++) {
+		if(num[i] !== first) {
+		return false;
+	};
+}
+	return true;
+}
+
+isUniform([1,1,1,1,1,2,1,1,1,1,1])
+
+
+function sumArray(num) {
+	var total = 0;
+	num.forEach(function(i) {
+		total += i;
+	});
+	return total;
+}
+
+sumArray([1,2,3,4,5,6,7,8,9])
+
+
+function max(num) {
+	var max = num[0];
+for (var i = 1; i < num.length; i++) {
+		if(num[i] > max) {
+		max = num[i];
+	}
+}
+	return max;
+}
+
+max([15,38,5,107,99,12,68])
