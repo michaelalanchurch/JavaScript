@@ -1,0 +1,63 @@
+var movies = [
+	{
+		title: "Mad Max", 
+		rating: 4, 
+		yesSeen: true
+	},
+
+	{
+		title: "Braveheart", 
+		rating: 4, 
+		yesSeen: true
+	},
+
+	{
+		title: "Last Temptation", 
+		rating: 1, 
+		yesSeen: false
+	},
+
+	{
+		title: "Lethal Weapon 3", 
+		rating: 1, 
+		yesSeen: false
+	},
+
+	{
+		title: "Lethal Weapon 5",
+		rating: 2,
+		yesSeen: false
+	}
+]
+
+// run
+
+movies.forEach(function(movie) {
+	var result = "You have ";
+	if(movie.yesSeen) {
+		result += "seen ";
+	} else {
+		result += "not seen ";
+	}
+	result += "\"" + movie.title + "\" - " +  movie.rating +" stars"
+	console.log(result);
+});
+
+// or run
+
+function buildString(movie) {
+	var result = "You have ";
+	if(movie.yesSeen) {
+		result += "seen ";
+	} else {
+		result += "not seen ";
+	}
+	result += "\"" + movie.title + "\" - " +  movie.rating +" stars"
+	return result;
+}
+
+// with
+
+movies.forEach(function(movie) {
+	console.log(buildString(movie));
+});
