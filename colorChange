@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.purple {
+		background-color: purple;
+	}
+	</style>
+</head>
+<body>
+	<button>CLICK ME</button>
+	<script type="text/javascript" src="colorChange.js"></script>
+</body>
+</html>
+*********************************************************************
+var button = document.querySelector("button");
+var isPurple = false;
+
+button.addEventListener("click", function() {
+	if(isPurple) {
+		document.body.style.background = "white";
+		isPurple = false;
+	} else {
+		document.body.style.background = "purple";
+		isPurple = true;
+	}
+});
+
+// or
+
+var button = document.querySelector("button");
+var isPurple = false;
+
+button.addEventListener("click", function() {
+	if(isPurple) {
+		document.body.style.background = "white";
+	} else {
+		document.body.style.background = "purple";
+	}
+	isPurple = !isPurple;
+});
+
+// or add a css class to html
+
+var button = document.querySelector("button");
+
+button.addEventListener("click", function() {
+	document.body.classList.toggle("purple");
+});
